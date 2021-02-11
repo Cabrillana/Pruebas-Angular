@@ -30,7 +30,9 @@ export class UserService {
     return this.http.delete(url)
   }
 
-  
+  subirImagen(entrada): Observable<any>{
+   return this.http.post(url+'image/', entrada) 
+  }
 
   guardarToken(token:string): void{
     localStorage.setItem('userToken', token)
