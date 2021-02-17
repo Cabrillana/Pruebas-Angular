@@ -34,6 +34,9 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/crud" routerLinkActive="{{estiloActivo}}">Crud</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}">Lista de usuarios</a>
+            </li>
         </ul>
         <ul class="navbar-nav mt-2 mt-lg-0">
             <ng-template [ngIf]='!fnLogged()' [ngIfElse]='salir'>
