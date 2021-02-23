@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm sticky-top bg-white">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">Angular DAW</a>
+    <a class="navbar-brand" routerLink="/"><img src='assets/icon/logo.png' width='40px'>Angular DAW</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/home" routerLinkActive="{{estiloActivo}}">Home</a>
+                <a class="nav-link" routerLink="/home" routerLinkActive="{{estiloActivo}}"><i class="fas fa-home" routerLinkActive='fa-spin'></i>Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
@@ -17,7 +17,7 @@
                 <a class="nav-link" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}">Calculadora</a>
+                <a class="nav-link" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}"><i class="fas fa-calculator" routerLinkActive= "fa-spin"></i>Calculadora</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
@@ -35,7 +35,8 @@
                 <a class="nav-link" routerLink="/crud" routerLinkActive="{{estiloActivo}}">Crud</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}">Lista de usuarios</a>
+                <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}">
+                    <i class="fa fa-users" routerLinkActive='fa-spin' aria-hidden="true" ></i>Lista de usuarios</a>
             </li>
         </ul>
         <ul class="navbar-nav mt-2 mt-lg-0">
@@ -44,7 +45,7 @@
                 <a class="nav-link" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActive="{{estiloActivo}}">Login</a>
+                <a class="nav-link" routerLink="/login" routerLinkActive="{{estiloActivo}}"><i class="fas fa-sign-in-alt"></i>Login</a>
             </li>
         </ng-template>
         <ng-template #salir>
@@ -52,7 +53,7 @@
                 <a class="nav-link" routerLink="/perfil" routerLinkActive="{{estiloActivo}}">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="doLogout()" routerLink='.'>Logout</a>
+                <a class="nav-link" (click)="doLogout()" routerLink='.'><i class="fas fa-sign-out-alt"></i>Logout</a>
             </li>
         </ng-template>
         </ul>
