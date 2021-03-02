@@ -8,8 +8,10 @@
         <p class="card-text">Teléfono:{{perfil.telefono}}</p>
         <img src='{{perfil.imgSrc}}' width='200px'>
         <hr>
-        <button (click)='mostrarEditar=!mostrarEditar'>Editar usuario</button>
-        <button (click)='mostrarEliminar=!mostrarEliminar'>Eliminar usuario</button>
+        <div class="btn-group btn-block">
+          <button class="btn btn-primary" (click)='mostrarEditar=!mostrarEditar'>Editar usuario</button>
+          <button class="btn btn-danger" (click)='mostrarEliminar=!mostrarEliminar'>Eliminar usuario</button>
+        </div>
     </div>
 </div>
 <div class="card" *ngIf='mostrarEditar'>
@@ -41,7 +43,7 @@
         </div>
         <button class="btn btn-primary btn-block" type ="submit" [disabled]="!formPerfil.valid">Guardar cambios</button>
       </form>
-        <button (click)='mostrarEditar=!mostrarEditar'>Cancelar</button>
+        <button class="btn btn-success btn-block" (click)='mostrarEditar=!mostrarEditar'>Cancelar</button>
     </div>
 <div class="card" *ngIf="mostrarEliminar">
     <div class="card-header h5 text-center">Para eliminar tu perfil introduce tu e-mail</div>
@@ -51,10 +53,22 @@
         <button (click)='eliminarUsuario()' [disabled]='inputBorrar!=perfil.email'>Eliminar</button>
     </div>
 </div>
-<form [formGroup]='formImagen' (ngSubmit)='subirImagen()'>
-  <input type="file" formControlName='imagen' (change)='cambiaImagen($event)'>
-  <button type='submit'>Subir imagen de perfil</button>
-</form>
-<br><br>
-<input type="file" (change)='tengoFoto($event)'>
-<button type='button' (click)='subirFoto()'>Subir imagen por parámetros</button>
+<div class="card">
+  <div class="card-header">Editar Imagen</div>
+  <div class="card-body">
+    <form [formGroup]='formImagen' (ngSubmit)='subirImagen()'>
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputF1" formControlName='imagen' (change)='cambiaImagen($event)'>
+          <label class="custom-file-label" for="inputF1">Elegir Archivo</label>
+        </div>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type='submit'>Subir imagen de perfil</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <input type="file" (change)='tengoFoto($event)'>
+    <button type='button' (click)='subirFoto()'>Subir imagen por parámetros</button>
+  </div>
+</div>
