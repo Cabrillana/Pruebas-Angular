@@ -12,6 +12,7 @@ import { telefonoValido } from 'src/app/validaciones/validaciones';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+  mensaje: string = ''
   perfil: User = {}
   mostrarEditar: boolean = false
   mostrarEliminar: boolean = false
@@ -48,7 +49,8 @@ editarPerfil(): void{
       this.cargarPerfil()
       this.mostrarEditar = false
     },
-    error => console.log(error)
+    error => {console.log(error)
+      this.mensaje=error.error.error}
   )
 }
 eliminarUsuario(): void{
