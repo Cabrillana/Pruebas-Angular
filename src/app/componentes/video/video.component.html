@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header text-center">Añadir videos de Youtube</div>
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <input class="form-control" type="text" placeholder="Enlace al vídeo" [(ngModel)]="enlaceEntrada">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" (click)="obtenerId()">Obtener ID</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" *ngIf="idConvertido">
+            <div class="col-md-12">
+              <hr>
+              <p>Se ha extraido de la URL el siguiente identificador de vídeo*: <strong>{{idConvertido}}</strong></p>
+              <p><small>* Este identificador es el que suele guardar en la base de datos.</small></p>
+              <button class="btn btn-success btn-block" (click)="abrirVideo()">Abrir video</button>
+            </div>
+          </div>
+          <div class="row" *ngIf="urlVideo">
+            <div class="col-md-12">
+              <hr>
+              <iframe width="100%" height="480px" [src]="urlVideo" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

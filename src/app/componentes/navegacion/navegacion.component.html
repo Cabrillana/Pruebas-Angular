@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/home" routerLinkActive="{{estiloActivo}}"><i class="fas fa-home" routerLinkActive='fa-spin'></i>Home</a>
+                <a class="nav-link" routerLink="/home" routerLinkActive="{{estiloActivo}}"><i class="fas fa-home" routerLinkActive='fa-spin'></i> Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
@@ -17,7 +17,7 @@
                 <a class="nav-link" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}"><i class="fas fa-calculator" routerLinkActive= "fa-spin"></i>Calculadora</a>
+                <a class="nav-link" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}"><i class="fas fa-calculator" routerLinkActive= "fa-spin"></i> Calculadora</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
@@ -36,15 +36,19 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/listaPerfiles" routerLinkActive="{{estiloActivo}}">
-                    <i class="fa fa-users" routerLinkActive='fa-spin' aria-hidden="true" ></i>Lista de usuarios</a>
+                    <i class="fa fa-users" routerLinkActive='fa-spin'></i> Lista de usuarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/grafica" routerLinkActive="{{estiloActivo}}">
-                    <i class="fa fa-chart-line" routerLinkActive='fa-spin' aria-hidden="true" ></i>Gráfica</a>
+                    <i class="fa fa-chart-line" routerLinkActive='fa-spin'></i> Gráfica</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/mapa" routerLinkActive="{{estiloActivo}}">
-                    <i class="fa fa-map-marker" routerLinkActive='fa-spin' aria-hidden="true" ></i>Mapa</a>
+                    <i class="fa fa-map-marker" routerLinkActive='fa-spin'></i> Mapa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/video" routerLinkActive="{{estiloActivo}}">
+                  <i class="fab fa-youtube"></i> Video</a>
             </li>
         </ul>
         <ul class="navbar-nav mt-2 mt-lg-0">
@@ -53,7 +57,7 @@
                 <a class="nav-link" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActive="{{estiloActivo}}"><i class="fas fa-sign-in-alt"></i>Login</a>
+                <a class="nav-link" routerLink="/login" routerLinkActive="{{estiloActivo}}"><i class="fas fa-sign-in-alt"></i> Login</a>
             </li>
         </ng-template>
         <ng-template #salir>
@@ -61,10 +65,10 @@
                 <a class="nav-link" routerLink="/perfil" routerLinkActive="{{estiloActivo}}">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="doLogout()" routerLink='.'><i class="fas fa-sign-out-alt"></i>Logout</a>
+                <a class="nav-link" (click)="doLogout()" routerLink='.'><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
             <li class="nav-item" *ngIf='fnAdmin()'>
-                <a class="nav-link" routerLink="/admin" routerLinkActive="{{estiloActivo}}"><i class="fas fa-lock"></i>Admin</a>
+                <a class="nav-link" routerLink="/admin" routerLinkActive="{{estiloActivo}}"><i class="fas fa-lock"></i> Admin</a>
             </li>
         </ng-template>        
         </ul>

@@ -21,6 +21,7 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
 import { MultiplicarComponent } from './componentes/multiplicar/multiplicar.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { TuberiasComponent } from './componentes/tuberias/tuberias.component';
+import { VideoComponent } from './componentes/video/video.component';
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path: "listaPerfiles", component:ListaPerfilesComponent},
   {path: "grafica", component:GraficaComponent},
   {path: "mapa", component:MapaComponent},
+  {path: "video", component:VideoComponent},
   {path: "admin", component:EditarRolesComponent, canActivate:[AdminGuard]},
   {path: "**", component: HomeComponent}
 ];

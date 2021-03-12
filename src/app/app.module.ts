@@ -33,6 +33,7 @@ import { environment } from '../environments/environment';
 import { GraficaComponent } from './componentes/grafica/grafica.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { EditarRolesComponent } from './componentes/editar-roles/editar-roles.component';
+import { VideoComponent } from './componentes/video/video.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { EditarRolesComponent } from './componentes/editar-roles/editar-roles.co
     ListaPerfilesComponent,
     GraficaComponent,
     MapaComponent,
-    EditarRolesComponent
+    EditarRolesComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

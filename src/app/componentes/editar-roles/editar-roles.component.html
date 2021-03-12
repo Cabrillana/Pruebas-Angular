@@ -1,22 +1,32 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>nombre</th>
-            <th>email</th>
-            <th>rol</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = 'let usuario of usuarios'>
-            <td scope="row">{{usuario.nombre}}</td>
-            <td>{{usuario.email}}</td>
-            <td>{{usuario.nombreRol}}</td>
-            <td>
-                <select [(ngModel)]='usuario.idRol'>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre</th><th>E-Mail</th><th>Rol Actual</th><th>Modificar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let usuario of usuarios'>
+              <td scope="row">{{usuario.nombre}}</td>
+              <td>{{usuario.email}}</td>
+              <td>{{usuario.nombreRol}}</td>
+              <td>
+                <div class="input-group input-group-sm">
+                  <select class="custom-select" [(ngModel)]='usuario.idRol'>
                     <option *ngFor='let rol of roles' [value]='rol.id'>{{rol.nombreRol}}</option>
-                </select>
-                <button (click)='editarRol(usuario.id, usuario.idRol)'>actualizar</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-success btn-sm" (click)='editarRol(usuario.id, usuario.idRol)'>Actualizar</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
